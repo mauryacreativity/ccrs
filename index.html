@@ -1,0 +1,3185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Classic Car Rental Service Pvt Ltd - The Travel Experts</title>
+
+    <!-- Tailwind CSS CDN -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts Inter -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        brandNavy: '#0f2c59',
+
+                        brandBlue: '#0066cc',
+
+                        brandRed: '#e63946',
+
+                        brandGray: '#f8fafc',
+
+                        brandDark: '#1e293b'
+
+                    },
+
+                    fontFamily: {
+
+                        sans: ['Inter', 'sans-serif'],
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <style>
+
+        /* Custom Scrollbar */
+
+        ::-webkit-scrollbar {
+
+            width: 8px;
+
+        }
+
+        ::-webkit-scrollbar-track {
+
+            background: #f1f5f9;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+
+            background: #0066cc;
+
+            border-radius: 4px;
+
+        }
+
+        .page-section {
+
+            display: none;
+
+        }
+
+        .page-section.active {
+
+            display: block;
+
+            animation: fadeIn 0.3s ease-in-out;
+
+        }
+
+        @keyframes fadeIn {
+
+            from { opacity: 0; transform: translateY(6px); }
+
+            to { opacity: 1; transform: translateY(0); }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+ 
+
+    <!-- TOP ANNOUNCEMENT / CONTACT BAR -->
+
+    <div class="bg-brandNavy text-white text-xs sm:text-sm py-2 px-4 shadow-sm border-b border-blue-900/50">
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+
+                <a href="tel:+919654362430" class="hover:text-amber-300 transition flex items-center gap-1.5 font-medium">
+
+                    <i class="fa-solid fa-phone text-brandRed"></i> +91 96543 62430
+
+                </a>
+
+                <a href="mailto:sandeep@ccrs.co.in" class="hover:text-amber-300 transition flex items-center gap-1.5">
+
+                    <i class="fa-solid fa-envelope text-brandBlue"></i> sandeep@ccrs.co.in
+
+                </a>
+
+                <a href="mailto:booking@ccrs.co.in" class="hover:text-amber-300 transition flex items-center gap-1.5">
+
+                    <i class="fa-solid fa-paper-plane text-emerald-400"></i> booking@ccrs.co.in
+
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-3 text-xs">
+
+                <a href="https://maps.app.goo.gl/CvBXyroaaPtXQtz77" target="_blank" class="hover:text-amber-300 transition flex items-center gap-1 bg-blue-950/70 px-2.5 py-1 rounded-full border border-blue-800/60">
+
+                    <i class="fa-solid fa-location-dot text-brandRed"></i> Splendor Tower 2, Sector 58 Gurgaon
+
+                </a>
+
+                <span class="bg-emerald-600/90 text-white font-semibold px-2 py-0.5 rounded-full text-[10px] tracking-wider uppercase">24x7 Active Support</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+    <!-- MAIN NAVBAR -->
+
+    <header class="bg-white sticky top-0 z-40 shadow-md border-b border-slate-200">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex justify-between items-center h-20">
+
+                <!-- LOGO SECTION -->
+
+                <div class="flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')">
+
+                    <!-- SVG Logo matching Company Graphic -->
+
+                    <svg width="48" height="48" viewBox="0 0 100 100" class="drop-shadow-sm">
+
+                        <circle cx="48" cy="52" r="38" fill="#0066cc" />
+
+                        <path d="M 12 55 Q 50 15 90 8 Q 65 35 15 68 Z" fill="#ffffff" />
+
+                        <path d="M 68 32 L 88 8 L 82 28 Z" fill="#e63946" />
+
+                    </svg>
+
+                    <div>
+
+                        <span class="block text-xl sm:text-2xl font-extrabold tracking-tight text-brandNavy leading-tight">
+
+                            Classic Car Rentals
+
+                        </span>
+
+                        <span class="block text-xs font-bold text-brandRed uppercase tracking-widest">
+
+                            The Travel Experts
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- DESKTOP NAVIGATION LINKS -->
+
+                <nav class="hidden xl:flex items-center gap-1 text-sm font-semibold text-slate-700">
+
+                    <button onclick="navigateTo('home')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Home</button>
+
+                    <button onclick="navigateTo('about')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">About Us</button>
+
+                    <button onclick="navigateTo('services')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Services</button>
+
+                    <button onclick="navigateTo('fleet')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Fleet</button>
+
+                    <button onclick="navigateTo('clients')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Clients</button>
+
+                    <button onclick="navigateTo('careers')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Careers</button>
+
+                    <button onclick="navigateTo('blog')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Blog</button>
+
+                    <button onclick="navigateTo('locations')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Locations</button>
+
+                    <button onclick="navigateTo('feedback')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Feedback</button>
+
+                    <button onclick="navigateTo('contact')" class="nav-btn px-3 py-2 rounded-lg hover:text-brandBlue hover:bg-slate-100 transition">Contact</button>
+
+                </nav>
+
+ 
+
+                <!-- CALL TO ACTION & ADMIN BUTTONS -->
+
+                <div class="hidden lg:flex items-center gap-3">
+
+                    <button onclick="navigateTo('admin')" class="px-3 py-2 text-xs font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition flex items-center gap-1.5">
+
+                        <i class="fa-solid fa-database text-brandBlue"></i> Data / Export
+
+                    </button>
+
+                    <button onclick="navigateTo('booking')" class="px-5 py-2.5 font-bold text-sm text-white bg-brandRed hover:bg-red-700 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+
+                        <i class="fa-solid fa-car"></i> Book Now
+
+                    </button>
+
+                </div>
+
+ 
+
+                <!-- MOBILE MENU TOGGLE -->
+
+                <div class="xl:hidden flex items-center gap-2">
+
+                    <button onclick="navigateTo('booking')" class="px-3 py-1.5 text-xs font-bold text-white bg-brandRed rounded-lg">
+
+                        Book
+
+                    </button>
+
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none">
+
+                        <i class="fa-solid fa-bars text-2xl"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+ 
+
+        <!-- MOBILE NAVIGATION MENU -->
+
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+
+            <button onclick="navigateTo('home')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">Home</button>
+
+            <button onclick="navigateTo('about')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">About Us</button>
+
+            <button onclick="navigateTo('services')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">Services</button>
+
+            <button onclick="navigateTo('fleet')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">Fleet & Luxury</button>
+
+            <button onclick="navigateTo('clients')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">Corporate Clients</button>
+
+            <button onclick="navigateTo('careers')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">Careers</button>
+
+            <button onclick="navigateTo('blog')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">Blog</button>
+
+            <button onclick="navigateTo('locations')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">PAN India Locations</button>
+
+            <button onclick="navigateTo('feedback')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">Feedback</button>
+
+            <button onclick="navigateTo('booking')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-brandRed hover:bg-red-50">Book A Vehicle</button>
+
+            <button onclick="navigateTo('contact')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-slate-700 hover:bg-slate-100">Contact Us</button>
+
+            <button onclick="navigateTo('admin')" class="block w-full text-left px-3 py-2 rounded-md font-semibold text-brandBlue hover:bg-blue-50">Admin / Export Saved Data</button>
+
+        </div>
+
+    </header>
+
+ 
+
+    <main class="flex-grow">
+
+        
+
+        <!-- ==================== 1. HOME PAGE ==================== -->
+
+        <section id="page-home" class="page-section active">
+
+            <!-- HERO BANNER -->
+
+            <div class="relative bg-gradient-to-r from-brandNavy via-blue-900 to-brandDark text-white py-16 md:py-24 px-4 overflow-hidden">
+
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+
+                        <div class="inline-flex items-center gap-2 bg-brandBlue/30 border border-blue-400/40 text-blue-200 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide">
+
+                            <i class="fa-solid fa-award text-amber-400"></i> GST Registered • Founded 2014 • 10+ Years Excellence
+
+                        </div>
+
+                        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+
+                            Premium Corporate Transport & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-white to-sky-300">Cab Services in India</span>
+
+                        </h1>
+
+                        <p class="text-slate-200 text-base sm:text-lg max-w-2xl font-light">
+
+                            Welcome to <strong class="text-white font-semibold">Classic Car Rental Service Pvt Ltd</strong> (The Travel Experts). Dependable, safe, and tech-enabled mobility solutions for corporate fleets, employee transit, outstation travel, and luxury weddings.
+
+                        </p>
+
+                        
+
+                        <!-- Core Highlights Pill Row -->
+
+                        <div class="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start text-xs font-medium text-slate-200">
+
+                            <span class="bg-white/10 border border-white/20 px-3 py-1.5 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> GPS Live Tracking</span>
+
+                            <span class="bg-white/10 border border-white/20 px-3 py-1.5 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-bottle-water text-sky-400"></i> Mineral Water & Tissues</span>
+
+                            <span class="bg-white/10 border border-white/20 px-3 py-1.5 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-user-shield text-amber-400"></i> Verified Chauffeurs</span>
+
+                            <span class="bg-white/10 border border-white/20 px-3 py-1.5 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-clock text-rose-400"></i> 24/7 Dispatch</span>
+
+                        </div>
+
+ 
+
+                        <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+                            <button onclick="navigateTo('booking')" class="px-8 py-4 bg-brandRed hover:bg-red-700 text-white font-bold rounded-xl shadow-lg transition transform hover:-translate-y-1 text-center">
+
+                                <i class="fa-solid fa-calendar-check mr-2"></i> Book Cab Online
+
+                            </button>
+
+                            <button onclick="navigateTo('services')" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl backdrop-blur-sm transition text-center">
+
+                                Explore Services
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+ 
+
+                    <!-- QUICK BOOKING SEARCH BOX -->
+
+                    <div class="lg:col-span-5 bg-white text-slate-800 rounded-2xl shadow-2xl p-6 border border-slate-100">
+
+                        <div class="border-b border-slate-100 pb-4 mb-4 flex justify-between items-center">
+
+                            <h3 class="text-lg font-extrabold text-brandNavy flex items-center gap-2">
+
+                                <i class="fa-solid fa-bolt text-amber-500"></i> Quick Ride Estimate
+
+                            </h3>
+
+                            <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-0.5 rounded-full">Instant Rate</span>
+
+                        </div>
+
+                        
+
+                        <form id="hero-quick-calc" onsubmit="handleQuickEstimate(event)" class="space-y-4 text-xs font-semibold">
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Service Type</label>
+
+                                <select id="hero-service-type" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brandBlue outline-none">
+
+                                    <option value="LTR">Long Term Rental (LTR) - Monthly 2600km</option>
+
+                                    <option value="Short">Short Term Rental (8h/80km)</option>
+
+                                    <option value="Airport">Airport Transfer (4h/40km)</option>
+
+                                    <option value="ETS">Employee Transportation (ETS)</option>
+
+                                    <option value="Event">Event & Wedding Luxury Travel</option>
+
+                                </select>
+
+                            </div>
+
+ 
+
+                            <div class="grid grid-cols-2 gap-3">
+
+                                <div>
+
+                                    <label class="block text-slate-600 mb-1">Vehicle Category</label>
+
+                                    <select id="hero-car-type" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brandBlue outline-none">
+
+                                        <option value="Sedan">Sedan (Dzire / Etios)</option>
+
+                                        <option value="SUV">SUV (Innova Crysta)</option>
+
+                                        <option value="Luxury">Luxury Sedan (BMW / Mercedes)</option>
+
+                                        <option value="Traveller">Tempo Traveller (12/16/26)</option>
+
+                                        <option value="Bus">Luxury Tourist Bus</option>
+
+                                    </select>
+
+                                </div>
+
+                                <div>
+
+                                    <label class="block text-slate-600 mb-1">City Location</label>
+
+                                    <input type="text" id="hero-city" placeholder="e.g. Gurgaon / Delhi" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brandBlue outline-none">
+
+                                </div>
+
+                            </div>
+
+ 
+
+                            <div id="quick-result" class="hidden bg-blue-50 border border-blue-200 p-3 rounded-lg text-brandNavy font-bold text-center">
+
+                                Estimated Plan Selected! Click below to finalize booking.
+
+                            </div>
+
+ 
+
+                            <button type="submit" class="w-full bg-brandNavy hover:bg-brandBlue text-white py-3 rounded-xl font-bold transition shadow-md">
+
+                                Calculate & Proceed to Booking <i class="fa-solid fa-arrow-right ml-1"></i>
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+ 
+
+            <!-- IN-CAR GUEST AMENITIES HIGHLIGHT BAR -->
+
+            <div class="bg-gradient-to-r from-slate-900 to-brandNavy py-8 px-4 text-white">
+
+                <div class="max-w-7xl mx-auto">
+
+                    <p class="text-center text-xs font-bold text-amber-400 uppercase tracking-widest mb-6">Standard Premium In-Car Hospitality For Every Guest</p>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10 hover:border-brandBlue transition">
+
+                            <i class="fa-solid fa-bottle-water text-3xl text-sky-400 mb-2"></i>
+
+                            <h4 class="font-bold text-sm">Complimentary Mineral Water</h4>
+
+                            <p class="text-xs text-slate-300 mt-1">Chilled sealed bottles provided for all rides</p>
+
+                        </div>
+
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10 hover:border-brandBlue transition">
+
+                            <i class="fa-solid fa-box-tissue text-3xl text-emerald-400 mb-2"></i>
+
+                            <h4 class="font-bold text-sm">Fresh Facial Tissues</h4>
+
+                            <p class="text-xs text-slate-300 mt-1">Sanitized tissue box & wet wipes standard</p>
+
+                        </div>
+
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10 hover:border-brandBlue transition">
+
+                            <i class="fa-solid fa-location-crosshairs text-3xl text-amber-400 mb-2"></i>
+
+                            <h4 class="font-bold text-sm">Live GPS Location Tracking</h4>
+
+                            <p class="text-xs text-slate-300 mt-1">Real-time route monitoring for guest safety</p>
+
+                        </div>
+
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10 hover:border-brandBlue transition">
+
+                            <i class="fa-solid fa-shield-virus text-3xl text-rose-400 mb-2"></i>
+
+                            <h4 class="font-bold text-sm">24/7 Security & Hygiene</h4>
+
+                            <p class="text-xs text-slate-300 mt-1">Sanitized cabins & verified uniform drivers</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+ 
+
+            <!-- KEY SERVICES AT A GLANCE -->
+
+            <div class="py-16 px-4 max-w-7xl mx-auto">
+
+                <div class="text-center mb-12">
+
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-brandNavy">Our Comprehensive Mobility Offerings</h2>
+
+                    <p class="text-slate-600 mt-2 max-w-2xl mx-auto text-sm">Customized 4-wheel cab rentals, executive sedans, luxury SUVs, and fleet solutions designed for corporate compliance and individual ease.</p>
+
+                </div>
+
+ 
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Service 1 -->
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-brandBlue transition flex flex-col justify-between">
+
+                        <div>
+
+                            <div class="w-12 h-12 bg-blue-100 text-brandBlue rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-800">LTR (Long Term Rental)</h3>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+
+                                Fixed monthly contracts for corporates & executives. Package includes <strong class="text-brandNavy">26 days / 2600 km per month</strong> with dedicated chauffeur & maintenance.
+
+                            </p>
+
+                        </div>
+
+                        <button onclick="navigateTo('services')" class="mt-4 text-xs font-bold text-brandBlue hover:text-brandNavy flex items-center gap-1">Learn More <i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+
+ 
+
+                    <!-- Service 2 -->
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-brandBlue transition flex flex-col justify-between">
+
+                        <div>
+
+                            <div class="w-12 h-12 bg-red-100 text-brandRed rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+
+                                <i class="fa-solid fa-plane-departure"></i>
+
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-800">Short Term & Airport</h3>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+
+                                On-demand spot rentals: <strong class="text-brandNavy">8 Hours / 80 Km</strong> local packages, <strong class="text-brandNavy">4 Hours / 40 Km</strong> airport transfers, and outstation trips (250 km/day minimum).
+
+                            </p>
+
+                        </div>
+
+                        <button onclick="navigateTo('services')" class="mt-4 text-xs font-bold text-brandBlue hover:text-brandNavy flex items-center gap-1">Learn More <i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+
+ 
+
+                    <!-- Service 3 -->
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-brandBlue transition flex flex-col justify-between">
+
+                        <div>
+
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+
+                                <i class="fa-solid fa-building-user"></i>
+
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-800">Employee Transport (ETS)</h3>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+
+                                Safe, punctual office-to-home and home-to-office employee pickup & drop solutions for BPO, IT, and manufacturing hubs across India.
+
+                            </p>
+
+                        </div>
+
+                        <button onclick="navigateTo('services')" class="mt-4 text-xs font-bold text-brandBlue hover:text-brandNavy flex items-center gap-1">Learn More <i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+
+ 
+
+                    <!-- Service 4 -->
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-brandBlue transition flex flex-col justify-between">
+
+                        <div>
+
+                            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+
+                                <i class="fa-solid fa-champagne-glasses"></i>
+
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-800">Event & Wedding Mobility</h3>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+
+                                End-to-end guest movement for large scale weddings, corporate summits, and conventions using luxury sedans, SUVs, and coaches.
+
+                            </p>
+
+                        </div>
+
+                        <button onclick="navigateTo('services')" class="mt-4 text-xs font-bold text-brandBlue hover:text-brandNavy flex items-center gap-1">Learn More <i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+ 
+
+            <!-- TRUSTED CORPORATE CLIENTS SHOWCASE -->
+
+            <div class="bg-slate-100 py-12 px-4 border-y border-slate-200">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <p class="text-xs font-bold text-brandBlue uppercase tracking-widest mb-2">Trusted By Industry Giants</p>
+
+                    <h3 class="text-2xl font-bold text-brandNavy mb-8">Prominent Organizations We Proudly Serve</h3>
+
+                    
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm font-bold text-slate-700 text-sm flex items-center justify-center gap-2 border border-slate-200 hover:border-brandBlue transition">
+
+                            <i class="fa-solid fa-hospital text-rose-500"></i> Apollo Hospitals
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm font-bold text-slate-700 text-sm flex items-center justify-center gap-2 border border-slate-200 hover:border-brandBlue transition">
+
+                            <i class="fa-solid fa-gas-pump text-amber-500"></i> Bharat Petroleum
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm font-bold text-slate-700 text-xs flex items-center justify-center gap-2 border border-slate-200 hover:border-brandBlue transition text-left">
+
+                            <i class="fa-solid fa-train text-blue-600"></i> Japan High Speed Rail
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm font-bold text-slate-700 text-xs flex items-center justify-center gap-2 border border-slate-200 hover:border-brandBlue transition text-left">
+
+                            <i class="fa-solid fa-bolt text-yellow-600"></i> L&T Hydropower
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm font-bold text-slate-700 text-sm flex items-center justify-center gap-2 border border-slate-200 hover:border-brandBlue transition">
+
+                            <i class="fa-solid fa-building-columns text-red-600"></i> HDFC Bank
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm font-bold text-slate-700 text-sm flex items-center justify-center gap-2 border border-slate-200 hover:border-brandBlue transition">
+
+                            <i class="fa-solid fa-cart-shopping text-cyan-600"></i> OLX India
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 2. ABOUT US PAGE ==================== -->
+
+        <section id="page-about" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">About Classic Car Rental Service Pvt Ltd</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">Founded in 2014 • Headquartered in Gurugram, Haryana • PAN India Footprint</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-7xl mx-auto px-4 py-12 space-y-12">
+
+                <!-- Journey & Mission -->
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                    <div class="space-y-4 text-slate-700 text-sm leading-relaxed">
+
+                        <span class="text-xs font-bold text-brandRed uppercase tracking-widest">Our Story & Heritage</span>
+
+                        <h2 class="text-2xl font-bold text-brandNavy">A Legacy of Dependable Mobility Excellence Since 2014</h2>
+
+                        <p>
+
+                            Classic Car Rental Service Pvt Ltd has emerged as one of the most trusted names in the Indian mobility and corporate transportation industry. What started with a clear vision to simplify travel has grown into a fully operational, GST-registered enterprise with a diversified fleet and an impressive portfolio of corporate clients.
+
+                        </p>
+
+                        <p>
+
+                            Headquartered in Splendor Tower 2, Golf Course Extension Road, Sector 58, Gurgaon, we provide end-to-end transport management, luxury car rentals, employee commute systems, and outstation taxi services.
+
+                        </p>
+
+                    </div>
+
+                    <div class="bg-slate-100 p-8 rounded-2xl border border-slate-200 space-y-4">
+
+                        <div class="flex items-center gap-3">
+
+                            <div class="w-10 h-10 bg-brandBlue text-white rounded-lg flex items-center justify-center font-bold">
+
+                                <i class="fa-solid fa-bullseye"></i>
+
+                            </div>
+
+                            <h3 class="text-lg font-bold text-brandNavy">Our Mission</h3>
+
+                        </div>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+
+                            To redefine the landscape of car rentals and employee transportation in India by offering safe, dependable, and technology-enabled mobility solutions, ensuring complete transparency, chauffeur discipline, and guest comfort.
+
+                        </p>
+
+                        <div class="flex items-center gap-3 pt-2">
+
+                            <div class="w-10 h-10 bg-brandRed text-white rounded-lg flex items-center justify-center font-bold">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </div>
+
+                            <h3 class="text-lg font-bold text-brandNavy">Our Vision</h3>
+
+                        </div>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+
+                            To become India’s most admired car rental brand through smart fleet monitoring systems, eco-conscious expansion, transparent pricing, and unmatched customer care across urban and rural centers.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- LEADERSHIP & MANAGEMENT TEAM -->
+
+                <div class="border-t border-slate-200 pt-10">
+
+                    <div class="text-center mb-8">
+
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-widest">Leadership Team</span>
+
+                        <h2 class="text-2xl font-bold text-brandNavy">Key Management & Executive Leadership</h2>
+
+                    </div>
+
+ 
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                        <!-- Leader 1 -->
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center space-y-3">
+
+                            <div class="w-20 h-20 bg-blue-100 text-brandBlue rounded-full flex items-center justify-center text-3xl font-bold mx-auto border-2 border-brandBlue">
+
+                                <i class="fa-solid fa-user-tie"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold text-lg text-brandNavy">Mr. Sandeep Sapra</h3>
+
+                                <p class="text-xs font-semibold text-brandRed">Founder & Managing Director</p>
+
+                            </div>
+
+                            <div class="text-xs text-slate-600 space-y-1 pt-2 border-t border-slate-100">
+
+                                <p><i class="fa-solid fa-envelope text-brandBlue mr-1"></i> sandeep@ccrs.co.in</p>
+
+                                <p><i class="fa-solid fa-phone text-emerald-600 mr-1"></i> +91 96543 62430</p>
+
+                            </div>
+
+                        </div>
+
+ 
+
+                        <!-- Leader 2 -->
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center space-y-3">
+
+                            <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl font-bold mx-auto border-2 border-emerald-500">
+
+                                <i class="fa-solid fa-user-gear"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold text-lg text-brandNavy">Mr. Raju Kaul / Raju Goel</h3>
+
+                                <p class="text-xs font-semibold text-emerald-600">Operations Head & CEO</p>
+
+                            </div>
+
+                            <div class="text-xs text-slate-600 space-y-1 pt-2 border-t border-slate-100">
+
+                                <p><i class="fa-solid fa-envelope text-brandBlue mr-1"></i> rkaul@ccrs.co.in</p>
+
+                                <p><i class="fa-solid fa-phone text-emerald-600 mr-1"></i> +91 72909 91912</p>
+
+                            </div>
+
+                        </div>
+
+ 
+
+                        <!-- Leader 3 -->
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center space-y-3">
+
+                            <div class="w-20 h-20 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-3xl font-bold mx-auto border-2 border-amber-500">
+
+                                <i class="fa-solid fa-user-astronaut"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold text-lg text-brandNavy">Shipra Jha</h3>
+
+                                <p class="text-xs font-semibold text-amber-600">Co-Owner & Executive Director</p>
+
+                            </div>
+
+                            <div class="text-xs text-slate-600 space-y-1 pt-2 border-t border-slate-100">
+
+                                <p><i class="fa-solid fa-envelope text-brandBlue mr-1"></i> booking@ccrs.co.in</p>
+
+                                <p><i class="fa-solid fa-building text-slate-500 mr-1"></i> Gurgaon Corporate HQ</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- 5 DEPARTMENTS OF THE COMPANY -->
+
+                <div class="border-t border-slate-200 pt-10">
+
+                    <div class="text-center mb-8">
+
+                        <span class="text-xs font-bold text-brandRed uppercase tracking-widest">Organizational Structure</span>
+
+                        <h2 class="text-2xl font-bold text-brandNavy">Our 5 Core Specialized Departments</h2>
+
+                        <p class="text-xs text-slate-600 mt-1">Structured operational workflows ensuring seamless coordination & zero service disruptions</p>
+
+                    </div>
+
+ 
+
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
+
+                            <div class="w-10 h-10 bg-blue-100 text-brandBlue rounded-lg flex items-center justify-center mx-auto mb-2 text-lg font-bold">1</div>
+
+                            <h4 class="font-bold text-sm text-brandNavy">Billing Department</h4>
+
+                            <p class="text-[11px] text-slate-500 mt-1">Invoicing, GST compliance, trip logs, monthly billing cycles.</p>
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
+
+                            <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-2 text-lg font-bold">2</div>
+
+                            <h4 class="font-bold text-sm text-brandNavy">Accounts Dept</h4>
+
+                            <p class="text-[11px] text-slate-500 mt-1">Corporate credit accounts, vendor settlements, financial audits.</p>
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
+
+                            <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mx-auto mb-2 text-lg font-bold">3</div>
+
+                            <h4 class="font-bold text-sm text-brandNavy">Human Resources</h4>
+
+                            <p class="text-[11px] text-slate-500 mt-1">Driver verification, recruitment, training & safety protocols.</p>
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
+
+                            <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mx-auto mb-2 text-lg font-bold">4</div>
+
+                            <h4 class="font-bold text-sm text-brandNavy">Operations Dept</h4>
+
+                            <p class="text-[11px] text-slate-500 mt-1">24/7 Live dispatch, GPS route monitoring & fleet management.</p>
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
+
+                            <div class="w-10 h-10 bg-red-100 text-brandRed rounded-lg flex items-center justify-center mx-auto mb-2 text-lg font-bold">5</div>
+
+                            <h4 class="font-bold text-sm text-brandNavy">Deal Depot</h4>
+
+                            <p class="text-[11px] text-slate-500 mt-1">Fleet acquisition, contract negotiation & client custom packages.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 3. SERVICES PAGE ==================== -->
+
+        <section id="page-services" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Our Core Car Rental & Transit Services</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">4 Specialized Categories Tailored for Corporate Fleets and Individual Needs Across India</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-7xl mx-auto px-4 py-12 space-y-12">
+
+                <!-- LTR Card -->
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+
+                    <div class="lg:col-span-8 space-y-3">
+
+                        <span class="bg-blue-100 text-brandBlue text-xs font-bold px-3 py-1 rounded-full uppercase">Service Type 1</span>
+
+                        <h2 class="text-2xl font-bold text-brandNavy">Long Term Rental (LTR) - Fixed Monthly Mobility</h2>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+
+                            Designed specifically for senior executives, corporate expats, and companies seeking hassle-free long-term vehicle usage without capital investment.
+
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-700 pt-2">
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Standard Package: <strong>26 Days / 2600 KM per month</strong></div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Dedicated Uniform Chauffeur Included</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Insurance, Maintenance & Breakdown Support</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Substitute Vehicle Provision</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-4 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
+
+                        <p class="text-xs font-bold text-slate-500">Monthly Custom Contracting</p>
+
+                        <p class="text-2xl font-extrabold text-brandNavy my-2">Flexible Corporate Rates</p>
+
+                        <button onclick="navigateTo('booking')" class="w-full bg-brandNavy text-white py-2.5 rounded-lg font-bold text-xs hover:bg-brandBlue transition">
+
+                            Book LTR Service
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- Short Term & Airport -->
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+
+                    <div class="lg:col-span-8 space-y-3">
+
+                        <span class="bg-red-100 text-brandRed text-xs font-bold px-3 py-1 rounded-full uppercase">Service Type 2</span>
+
+                        <h2 class="text-2xl font-bold text-brandNavy">Short Term Rental, Airport Transfers & Outstation Trips</h2>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+
+                            Flexible hourly and daily rental packages for business travel, client meetings, airport pickup/drop off, and long outstation road trips.
+
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-700 pt-2">
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <strong>Local Spot Rental:</strong> 8 Hours / 80 KM Package</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <strong>Airport Transfer:</strong> 4 Hours / 40 KM Package</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <strong>Outstation Journeys:</strong> Minimum 250 KM / Day</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> One-Way & Round-Trip Options</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-4 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
+
+                        <p class="text-xs font-bold text-slate-500">Spot Booking & Transfers</p>
+
+                        <p class="text-2xl font-extrabold text-brandRed my-2">Punctual & Clean</p>
+
+                        <button onclick="navigateTo('booking')" class="w-full bg-brandRed text-white py-2.5 rounded-lg font-bold text-xs hover:bg-red-700 transition">
+
+                            Book Short Term / Airport
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- ETS -->
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+
+                    <div class="lg:col-span-8 space-y-3">
+
+                        <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full uppercase">Service Type 3</span>
+
+                        <h2 class="text-2xl font-bold text-brandNavy">Employee Transportation Services (ETS)</h2>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+
+                            Complete end-to-end office-to-home and home-to-office employee pickup and drop services tailored for corporate parks, IT hubs, BPOs, and factories.
+
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-700 pt-2">
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Automated Route Optimization</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Female Employee Panic Button & Escort Security</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Real-Time Driver GPS Tracking</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Full Statutory Compliance & Driver Audits</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-4 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
+
+                        <p class="text-xs font-bold text-slate-500">Corporate Employee Commute</p>
+
+                        <p class="text-2xl font-extrabold text-emerald-600 my-2">100% Safe Transit</p>
+
+                        <button onclick="navigateTo('booking')" class="w-full bg-emerald-600 text-white py-2.5 rounded-lg font-bold text-xs hover:bg-emerald-700 transition">
+
+                            Request ETS Proposal
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- Event Based -->
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+
+                    <div class="lg:col-span-8 space-y-3">
+
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Service Type 4</span>
+
+                        <h2 class="text-2xl font-bold text-brandNavy">Event & Luxury Wedding Transportation</h2>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+
+                            Managed logistics for destination weddings, corporate summits, high-profile delegation visits, and large family celebrations.
+
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-700 pt-2">
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Luxury Sedans (Mercedes, BMW, Audi)</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Premium SUVs (Innova Crysta, Fortuner Legender)</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Group Mobility (Tempo Travellers & Luxury Buses)</div>
+
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Dedicated On-Site Event Coordinator</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-4 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
+
+                        <p class="text-xs font-bold text-slate-500">Events & Royal Weddings</p>
+
+                        <p class="text-2xl font-extrabold text-amber-600 my-2">Luxury Fleet</p>
+
+                        <button onclick="navigateTo('booking')" class="w-full bg-amber-600 text-white py-2.5 rounded-lg font-bold text-xs hover:bg-amber-700 transition">
+
+                            Reserve Event Fleet
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 4. FLEET & AMENITIES PAGE ==================== -->
+
+        <section id="page-fleet" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Our Diversified Fleet & Guest Amenities</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">From Executive Sedans to Luxury BMWs, Fortuners, Tempo Travellers, and Tourist Coaches</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-7xl mx-auto px-4 py-12 space-y-10">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Category 1: Sedans -->
+
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+
+                        <div class="bg-gradient-to-r from-blue-900 to-brandNavy p-6 text-white text-center">
+
+                            <i class="fa-solid fa-car-side text-4xl mb-2 text-amber-400"></i>
+
+                            <h3 class="text-xl font-bold">Executive Sedans</h3>
+
+                            <p class="text-xs text-slate-300">Dzire / Etios / Ciaz</p>
+
+                        </div>
+
+                        <div class="p-6 space-y-3 text-xs text-slate-600">
+
+                            <p class="font-semibold text-brandNavy">Ideal for daily office commutes, city meetings, and airport transfers.</p>
+
+                            <ul class="space-y-1.5 list-disc list-inside">
+
+                                <li>Seating Capacity: 4 Passengers + Chauffeur</li>
+
+                                <li>AC & Plush Clean Fabric Interiors</li>
+
+                                <li>Complimentary Tissue & Water Bottles</li>
+
+                                <li>GPS Real-Time Tracking</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+ 
+
+                    <!-- Category 2: SUVs -->
+
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+
+                        <div class="bg-gradient-to-r from-slate-900 to-brandNavy p-6 text-white text-center">
+
+                            <i class="fa-solid fa-car text-4xl mb-2 text-sky-400"></i>
+
+                            <h3 class="text-xl font-bold">Premium SUVs</h3>
+
+                            <p class="text-xs text-slate-300">Innova Crysta / Fortuner Legender</p>
+
+                        </div>
+
+                        <div class="p-6 space-y-3 text-xs text-slate-600">
+
+                            <p class="font-semibold text-brandNavy">Spacious comfort for long outstation family trips and executive travel.</p>
+
+                            <ul class="space-y-1.5 list-disc list-inside">
+
+                                <li>Seating Capacity: 6-7 Passengers + Chauffeur</li>
+
+                                <li>Captain Seats & Dual AC Climate Control</li>
+
+                                <li>High Safety Rating & Ample Luggage Boot</li>
+
+                                <li>Complimentary Mineral Water & Sanitizer</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+ 
+
+                    <!-- Category 3: Luxury -->
+
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+
+                        <div class="bg-gradient-to-r from-amber-900 to-brandDark p-6 text-white text-center">
+
+                            <i class="fa-solid fa-crown text-4xl mb-2 text-amber-300"></i>
+
+                            <h3 class="text-xl font-bold">Luxury Fleet</h3>
+
+                            <p class="text-xs text-amber-200">BMW 5 Series / Mercedes E-Class / Audi</p>
+
+                        </div>
+
+                        <div class="p-6 space-y-3 text-xs text-slate-600">
+
+                            <p class="font-semibold text-brandNavy">VIP transport, celebrity movements, and royal wedding celebrations.</p>
+
+                            <ul class="space-y-1.5 list-disc list-inside">
+
+                                <li>Leather upholstery & Ambient lighting</li>
+
+                                <li>Uniform Chauffeur in Formal Suit & Tie</li>
+
+                                <li>Premium Bottled Water, Mints & Tissues</li>
+
+                                <li>VIP Red Carpet Service upon request</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+ 
+
+                    <!-- Category 4: Tempo Travellers -->
+
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+
+                        <div class="bg-gradient-to-r from-emerald-900 to-brandNavy p-6 text-white text-center">
+
+                            <i class="fa-solid fa-van-shuttle text-4xl mb-2 text-emerald-400"></i>
+
+                            <h3 class="text-xl font-bold">Tempo Travellers</h3>
+
+                            <p class="text-xs text-slate-300">12 / 16 / 26 Seater Tourist Travellers</p>
+
+                        </div>
+
+                        <div class="p-6 space-y-3 text-xs text-slate-600">
+
+                            <p class="font-semibold text-brandNavy">Group mobility, team outings, corporate retreats, and family functions.</p>
+
+                            <ul class="space-y-1.5 list-disc list-inside">
+
+                                <li>Push-back Reclining Seats & LED TV</li>
+
+                                <li>Individual AC Vents & Charging Ports</li>
+
+                                <li>Spacious Overhead Luggage Storage</li>
+
+                                <li>Experienced Mountain & Highway Drivers</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+ 
+
+                    <!-- Category 5: Buses -->
+
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+
+                        <div class="bg-gradient-to-r from-indigo-900 to-brandNavy p-6 text-white text-center">
+
+                            <i class="fa-solid fa-bus text-4xl mb-2 text-purple-300"></i>
+
+                            <h3 class="text-xl font-bold">Luxury Tourist Coaches</h3>
+
+                            <p class="text-xs text-slate-300">35 / 45 / 52 Seater Volvo & AC Coaches</p>
+
+                        </div>
+
+                        <div class="p-6 space-y-3 text-xs text-slate-600">
+
+                            <p class="font-semibold text-brandNavy">Large corporate ETS movement, conventions, and long distance tours.</p>
+
+                            <ul class="space-y-1.5 list-disc list-inside">
+
+                                <li>Air-Suspension smooth ride comfort</li>
+
+                                <li>PA Microphone System for Guides</li>
+
+                                <li>GPS Monitored speed limit compliance</li>
+
+                                <li>Cleaned & sanitized after every journey</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 5. CORPORATE CLIENTS PAGE ==================== -->
+
+        <section id="page-clients" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Corporate Clients & Partner Network</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">Delivering Corporate Mobility to Multinational Corporations, Healthcare Giants, and Infrastructure Pioneers</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-7xl mx-auto px-4 py-12 space-y-10">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-hospital text-2xl text-rose-500"></i>
+
+                            <h3 class="font-bold text-lg text-brandNavy">Apollo Hospitals</h3>
+
+                        </div>
+
+                        <p class="text-xs text-slate-600">Managing critical doctor transport, emergency staff commute, and hospital guest travel across multi-specialty centers.</p>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-gas-pump text-2xl text-amber-500"></i>
+
+                            <h3 class="font-bold text-lg text-brandNavy">Bharat Petroleum (BPCL)</h3>
+
+                        </div>
+
+                        <p class="text-xs text-slate-600">Providing corporate LTR fleet and executive movement for refinery plants and corporate administration centers.</p>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-train-subway text-2xl text-blue-600"></i>
+
+                            <h3 class="font-bold text-xs text-brandNavy">Japan High Speed Rail Electrical Eng.</h3>
+
+                        </div>
+
+                        <p class="text-xs text-slate-600">Exclusively managing specialized technical team daily transit and site survey transportation for bullet train projects.</p>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-bolt text-2xl text-yellow-600"></i>
+
+                            <h3 class="font-bold text-lg text-brandNavy">L&T Uttaranchal Hydropower</h3>
+
+                        </div>
+
+                        <p class="text-xs text-slate-600">Supplying rugged, high-performance SUV cabs and shuttle services for engineers in demanding terrain locations.</p>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-building-columns text-2xl text-red-600"></i>
+
+                            <h3 class="font-bold text-lg text-brandNavy">HDFC Bank</h3>
+
+                        </div>
+
+                        <p class="text-xs text-slate-600">Dependable executive car rentals and inter-branch corporate transfers across regional offices.</p>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-cart-shopping text-2xl text-cyan-600"></i>
+
+                            <h3 class="font-bold text-lg text-brandNavy">OLX India Private Limited</h3>
+
+                        </div>
+
+                        <p class="text-xs text-slate-600">Employee transportation and corporate spot rentals for headquarters and satellite office operations.</p>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- Industries Served List -->
+
+                <div class="bg-slate-100 p-8 rounded-2xl border border-slate-200">
+
+                    <h3 class="text-xl font-bold text-brandNavy text-center mb-6">Industries & Sectors We Actively Serve</h3>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center text-xs font-semibold text-slate-700">
+
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">IT & Tech Parks</div>
+
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">BPO / KPO Firms</div>
+
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">Manufacturing Plants</div>
+
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">Event Planners</div>
+
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">Educational Institutes</div>
+
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">Individual Tourists</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 6. CAREERS PAGE ==================== -->
+
+        <section id="page-careers" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Careers at Classic Car Rentals</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">Join a Growing Transport & Mobility Enterprise</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-4xl mx-auto px-4 py-12">
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+
+                    <div>
+
+                        <h2 class="text-2xl font-bold text-brandNavy">We are hiring Chauffeurs, Fleet Managers & HR Executives!</h2>
+
+                        <p class="text-xs text-slate-600 mt-2">
+
+                            Classic Car Rental Service Pvt Ltd is constantly expanding its workforce across India. If you are a professional driver with a valid commercial license or an experienced fleet coordinator, we welcome you to apply.
+
+                        </p>
+
+                    </div>
+
+ 
+
+                    <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl text-xs text-brandNavy">
+
+                        <p class="font-bold flex items-center gap-2"><i class="fa-solid fa-paper-plane text-brandBlue"></i> How to Submit Your Resume / Credentials:</p>
+
+                        <p class="mt-1">Please email your CV or driver license details directly to: <strong class="text-brandBlue">booking@ccrs.co.in</strong> or contact our HR department.</p>
+
+                    </div>
+
+ 
+
+                    <!-- Career Application Form -->
+
+                    <form onsubmit="handleCareerSubmit(event)" class="space-y-4 text-xs font-semibold">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Full Name *</label>
+
+                                <input type="text" required placeholder="John Doe" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Phone Number *</label>
+
+                                <input type="tel" required placeholder="+91 98765 43210" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                        </div>
+
+ 
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Role Applied For *</label>
+
+                                <select required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                                    <option value="Chauffeur / Driver">Professional Chauffeur / Driver</option>
+
+                                    <option value="Fleet Supervisor">Fleet Operations Supervisor</option>
+
+                                    <option value="Billing Executive">Billing / Accounts Executive</option>
+
+                                    <option value="HR Recruiter">HR Recruiter</option>
+
+                                </select>
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Years of Experience</label>
+
+                                <input type="number" min="0" placeholder="e.g. 5" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                        </div>
+
+ 
+
+                        <div>
+
+                            <label class="block text-slate-600 mb-1">Cover Note / Brief Details</label>
+
+                            <textarea rows="3" placeholder="Tell us about your driving experience or qualifications..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue"></textarea>
+
+                        </div>
+
+ 
+
+                        <button type="submit" class="w-full bg-brandNavy hover:bg-brandBlue text-white py-3 rounded-xl font-bold transition">
+
+                            Submit Job Application <i class="fa-solid fa-check ml-1"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 7. BLOG PAGE ==================== -->
+
+        <section id="page-blog" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Mobility Insights & Corporate Travel Blog</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">Digital and Professional Industry Articles on Fleet Optimization and Employee Safety</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-7xl mx-auto px-4 py-12">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Article 1 -->
+
+                    <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+
+                        <div class="p-6 space-y-3">
+
+                            <span class="text-[10px] font-bold bg-blue-100 text-brandBlue px-2.5 py-1 rounded-full uppercase">Corporate Mobility</span>
+
+                            <h3 class="text-lg font-bold text-brandNavy leading-snug">The Future of Corporate Employee Transportation in India (2026 & Beyond)</h3>
+
+                            <p class="text-xs text-slate-600 leading-relaxed">
+
+                                How technology-integrated ETS solutions, automated roster scheduling, and GPS security monitoring are transforming daily office commute efficiency for multinational firms in Gurgaon and Bengaluru.
+
+                            </p>
+
+                        </div>
+
+                        <div class="p-6 border-t border-slate-100 text-xs text-slate-500 flex justify-between items-center">
+
+                            <span>By Sandeep Sapra</span>
+
+                            <span>Sep 2026</span>
+
+                        </div>
+
+                    </article>
+
+ 
+
+                    <!-- Article 2 -->
+
+                    <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+
+                        <div class="p-6 space-y-3">
+
+                            <span class="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full uppercase">Fleet Management</span>
+
+                            <h3 class="text-lg font-bold text-brandNavy leading-snug">Why Long Term Rentals (LTR) Outperform Fleet Capital Purchase</h3>
+
+                            <p class="text-xs text-slate-600 leading-relaxed">
+
+                                A comprehensive financial comparison showing how 26-day/2600-km fixed monthly car rental contracts save corporations up to 25% in depreciation, insurance overhead, and driver management costs.
+
+                            </p>
+
+                        </div>
+
+                        <div class="p-6 border-t border-slate-100 text-xs text-slate-500 flex justify-between items-center">
+
+                            <span>By Raju Kaul</span>
+
+                            <span>Aug 2026</span>
+
+                        </div>
+
+                    </article>
+
+ 
+
+                    <!-- Article 3 -->
+
+                    <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+
+                        <div class="p-6 space-y-3">
+
+                            <span class="text-[10px] font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full uppercase">Chauffeur Safety</span>
+
+                            <h3 class="text-lg font-bold text-brandNavy leading-snug">Essential Safety & Hygiene Protocols for VIP Guest Travel</h3>
+
+                            <p class="text-xs text-slate-600 leading-relaxed">
+
+                                The non-negotiable standards of modern car hire: Real-time speed tracking, sanitized cabins, complimentary sealed water bottles, facial tissues, and verified uniform driver etiquette.
+
+                            </p>
+
+                        </div>
+
+                        <div class="p-6 border-t border-slate-100 text-xs text-slate-500 flex justify-between items-center">
+
+                            <span>By Travel Experts Desk</span>
+
+                            <span>Jul 2026</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 8. LOCATIONS PAGE ==================== -->
+
+        <section id="page-locations" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">PAN India Service Locations</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">Providing Dependable Transportation Across Major Metro Cities and Rural Hubs</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-7xl mx-auto px-4 py-12 space-y-8">
+
+                <!-- Location Search Filter -->
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+
+                    <div class="flex flex-col sm:flex-row gap-4 items-center">
+
+                        <div class="relative flex-grow w-full">
+
+                            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400"></i>
+
+                            <input type="text" id="city-search" onkeyup="filterCities()" placeholder="Search city or state (e.g. Gurgaon, Mumbai, Kolkata, Rural)..." class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-brandBlue outline-none">
+
+                        </div>
+
+                        <a href="https://maps.app.goo.gl/CvBXyroaaPtXQtz77" target="_blank" class="w-full sm:w-auto px-5 py-2.5 bg-brandRed text-white font-bold text-xs rounded-xl hover:bg-red-700 transition flex items-center justify-center gap-2">
+
+                            <i class="fa-solid fa-location-arrow"></i> Open HQ on Google Maps
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- Cities Grid -->
+
+                <div id="cities-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Delhi NCR / Gurgaon
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Mumbai
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Bengaluru
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Hyderabad
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Kolkata
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Chennai
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Pune
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Ahmedabad
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-mountain text-brandBlue block text-xl mb-1"></i> Uttarakhand / Hydropower Regions
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-wheat-awn text-emerald-600 block text-xl mb-1"></i> Tier 2 / Tier 3 Rural Branches
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Jaipur
+
+                    </div>
+
+                    <div class="city-card bg-white p-4 rounded-xl border border-slate-200 text-center font-semibold text-xs text-brandNavy shadow-sm hover:border-brandBlue transition">
+
+                        <i class="fa-solid fa-city text-brandBlue block text-xl mb-1"></i> Chandigarh
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 9. FEEDBACK FORM PAGE ==================== -->
+
+        <section id="page-feedback" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Passenger Feedback & Rating</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">Your feedback helps us maintain top-tier service quality across India.</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-2xl mx-auto px-4 py-12">
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+
+                    <h2 class="text-xl font-bold text-brandNavy">Share Your Travel Experience</h2>
+
+ 
+
+                    <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)" class="space-y-4 text-xs font-semibold">
+
+                        <div>
+
+                            <label class="block text-slate-600 mb-1">Your Full Name *</label>
+
+                            <input type="text" id="fb-name" required placeholder="Name" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                        </div>
+
+ 
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Email Address *</label>
+
+                                <input type="email" id="fb-email" required placeholder="email@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Phone Number</label>
+
+                                <input type="tel" id="fb-phone" placeholder="+91..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                        </div>
+
+ 
+
+                        <div>
+
+                            <label class="block text-slate-600 mb-1">Rating (1 to 5 Stars)</label>
+
+                            <select id="fb-rating" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue text-amber-500 font-bold">
+
+                                <option value="5">⭐⭐⭐⭐⭐ 5 - Excellent Experience</option>
+
+                                <option value="4">⭐⭐⭐⭐ 4 - Very Good Service</option>
+
+                                <option value="3">⭐⭐⭐ 3 - Satisfactory Ride</option>
+
+                                <option value="2">⭐⭐ 2 - Needs Improvement</option>
+
+                                <option value="1">⭐ 1 - Poor Service</option>
+
+                            </select>
+
+                        </div>
+
+ 
+
+                        <div>
+
+                            <label class="block text-slate-600 mb-1">Detailed Feedback Comments *</label>
+
+                            <textarea id="fb-comments" rows="4" required placeholder="Tell us about chauffeur punctuality, vehicle cleanliness, water/tissue amenities..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue"></textarea>
+
+                        </div>
+
+ 
+
+                        <button type="submit" class="w-full bg-brandBlue hover:bg-blue-700 text-white py-3 rounded-xl font-bold transition">
+
+                            Submit Feedback Response <i class="fa-solid fa-paper-plane ml-1"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 10. BOOKING FORM PAGE ==================== -->
+
+        <section id="page-booking" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Book Your Vehicle Online</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">Instant confirmation for LTR, Airport Transfers, Outstation Trips, and Corporate Cab Bookings</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-4xl mx-auto px-4 py-12">
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
+
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+
+                        <h2 class="text-xl font-bold text-brandNavy flex items-center gap-2">
+
+                            <i class="fa-solid fa-car-side text-brandRed"></i> Complete Reservation Details
+
+                        </h2>
+
+                        <span class="text-xs bg-brandBlue/10 text-brandBlue font-bold px-3 py-1 rounded-full">Classic Car Rental Service</span>
+
+                    </div>
+
+ 
+
+                    <form id="main-booking-form" onsubmit="handleMainBookingSubmit(event)" class="space-y-4 text-xs font-semibold">
+
+                        <!-- Service & Vehicle -->
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Required Service Category *</label>
+
+                                <select id="bk-service" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                                    <option value="LTR Fixed Monthly">Long Term Rental (LTR) - 26 Days / 2600 KM</option>
+
+                                    <option value="Short Term 8h/80km">Short Term Rental (8h / 80km)</option>
+
+                                    <option value="Airport Transfer">Airport Transfer (4h / 40km)</option>
+
+                                    <option value="Outstation Journey">Outstation Travel (Min 250km/day)</option>
+
+                                    <option value="Employee Transportation (ETS)">Employee Transportation Services (ETS)</option>
+
+                                    <option value="Event & Wedding">Event & Wedding Luxury Movement</option>
+
+                                </select>
+
+                            </div>
+
+ 
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Vehicle Selection *</label>
+
+                                <select id="bk-vehicle" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                                    <option value="Sedan (Dzire/Etios)">Sedan (Dzire / Etios / Ciaz)</option>
+
+                                    <option value="SUV (Innova Crysta)">SUV (Innova Crysta)</option>
+
+                                    <option value="Fortuner Legender">Luxury SUV (Fortuner Legender)</option>
+
+                                    <option value="Luxury Sedan (BMW/Mercedes)">Luxury Sedan (BMW / Mercedes / Audi)</option>
+
+                                    <option value="Tempo Traveller 12-26 Seater">Tempo Traveller (12 / 16 / 26 Seater)</option>
+
+                                    <option value="Luxury Tourist Bus">Luxury Tourist Bus / Coach</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+ 
+
+                        <!-- Pickup Location & Date -->
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Pickup Address / City *</label>
+
+                                <input type="text" id="bk-pickup" required placeholder="e.g. Sector 58 Gurgaon" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Destination Address / City *</label>
+
+                                <input type="text" id="bk-drop" required placeholder="e.g. IGI Airport / Delhi / Outstation" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Travel Date & Time *</label>
+
+                                <input type="datetime-local" id="bk-datetime" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                        </div>
+
+ 
+
+                        <!-- Personal Contact Info -->
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-slate-100 pt-3">
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Full Name *</label>
+
+                                <input type="text" id="bk-name" required placeholder="Your Name" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Contact Phone *</label>
+
+                                <input type="tel" id="bk-phone" required placeholder="+91 96543 62430" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Email Address *</label>
+
+                                <input type="email" id="bk-email" required placeholder="sandeep@ccrs.co.in" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                        </div>
+
+ 
+
+                        <div>
+
+                            <label class="block text-slate-600 mb-1">Special Requirements / Guest Amenities Note</label>
+
+                            <textarea id="bk-notes" rows="3" placeholder="Specify water bottle quantity, luggage support, corporate billing details..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue"></textarea>
+
+                        </div>
+
+ 
+
+                        <button type="submit" class="w-full bg-brandRed hover:bg-red-700 text-white py-3.5 rounded-xl font-bold transition text-sm shadow-md">
+
+                            Confirm Booking Request <i class="fa-solid fa-check-circle ml-1"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 11. CONTACT US PAGE ==================== -->
+
+        <section id="page-contact" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Contact Us & HQ Location</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">We are ready to assist you 24 hours a day, 7 days a week.</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-7xl mx-auto px-4 py-12 space-y-12">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Contact Details -->
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+
+                        <h2 class="text-2xl font-bold text-brandNavy">Corporate Head Office</h2>
+
+ 
+
+                        <div class="space-y-4 text-xs font-medium text-slate-700">
+
+                            <div class="flex items-start gap-3">
+
+                                <div class="w-8 h-8 bg-blue-100 text-brandBlue rounded-lg flex items-center justify-center font-bold flex-shrink-0">
+
+                                    <i class="fa-solid fa-location-dot"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p class="font-bold text-slate-900">Address:</p>
+
+                                    <p class="text-slate-600 mt-0.5">
+
+                                        Unit No. 401-402, 4th Floor, Splendor Tower 2, Golf Course Extn. Road, Sector 58 Gurgaon, Haryana 122102
+
+                                    </p>
+
+                                    <a href="https://maps.app.goo.gl/CvBXyroaaPtXQtz77" target="_blank" class="inline-block mt-2 text-brandBlue font-bold hover:underline">
+
+                                        Open Google Maps Link <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+ 
+
+                            <div class="flex items-start gap-3 border-t border-slate-100 pt-4">
+
+                                <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p class="font-bold text-slate-900">Phone Contacts:</p>
+
+                                    <p class="text-slate-600 mt-0.5"><strong>Mr. Sandeep Sapra:</strong> +91 96543 62430</p>
+
+                                    <p class="text-slate-600"><strong>Mr. Raju Kaul / Raju Goel:</strong> +91 72909 91912</p>
+
+                                </div>
+
+                            </div>
+
+ 
+
+                            <div class="flex items-start gap-3 border-t border-slate-100 pt-4">
+
+                                <div class="w-8 h-8 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">
+
+                                    <i class="fa-solid fa-envelope"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p class="font-bold text-slate-900">Email Addresses:</p>
+
+                                    <p class="text-slate-600 mt-0.5">sandeep@ccrs.co.in</p>
+
+                                    <p class="text-slate-600">rkaul@ccrs.co.in</p>
+
+                                    <p class="text-slate-600">booking@ccrs.co.in (For CVs & Booking Queries)</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+ 
+
+                    <!-- Direct Message Form -->
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+
+                        <h2 class="text-xl font-bold text-brandNavy">Send Direct Message</h2>
+
+                        <form onsubmit="handleDirectContact(event)" class="space-y-4 text-xs font-semibold">
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Your Name *</label>
+
+                                <input type="text" required placeholder="Full Name" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Email / Phone *</label>
+
+                                <input type="text" required placeholder="Email or Mobile" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue">
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-slate-600 mb-1">Inquiry Message *</label>
+
+                                <textarea rows="4" required placeholder="Type your corporate mobility requirements..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-brandBlue"></textarea>
+
+                            </div>
+
+                            <button type="submit" class="w-full bg-brandNavy hover:bg-brandBlue text-white py-3 rounded-xl font-bold transition">
+
+                                Send Message <i class="fa-solid fa-paper-plane ml-1"></i>
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- ==================== 12. ADMIN / SAVED DATA EXPORT PAGE ==================== -->
+
+        <section id="page-admin" class="page-section">
+
+            <div class="bg-brandNavy text-white py-12 px-4">
+
+                <div class="max-w-7xl mx-auto text-center">
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Saved Responses & Data Export</h1>
+
+                    <p class="text-slate-300 mt-2 text-sm max-w-2xl mx-auto">View and Export all Local Saved Bookings & Customer Feedback as Excel/CSV Files</p>
+
+                </div>
+
+            </div>
+
+ 
+
+            <div class="max-w-7xl mx-auto px-4 py-12 space-y-8">
+
+                <!-- Action Buttons Bar -->
+
+                <div class="flex flex-wrap items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+
+                    <div>
+
+                        <h2 class="text-lg font-bold text-brandNavy">Database Management Panel</h2>
+
+                        <p class="text-xs text-slate-500">Persisted locally in LocalStorage browser database.</p>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <button onclick="exportToCSV('bookings')" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow transition flex items-center gap-1.5">
+
+                            <i class="fa-solid fa-file-excel"></i> Export Bookings CSV
+
+                        </button>
+
+                        <button onclick="exportToCSV('feedback')" class="px-4 py-2 bg-brandBlue hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow transition flex items-center gap-1.5">
+
+                            <i class="fa-solid fa-file-csv"></i> Export Feedback CSV
+
+                        </button>
+
+                        <button onclick="clearAllData()" class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl shadow transition flex items-center gap-1.5">
+
+                            <i class="fa-solid fa-trash"></i> Clear Saved Data
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- Bookings Table -->
+
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
+
+                    <h3 class="text-base font-bold text-brandNavy flex items-center gap-2">
+
+                        <i class="fa-solid fa-list-check text-brandRed"></i> Saved Booking Requests (<span id="booking-count">0</span>)
+
+                    </h3>
+
+                    <div class="overflow-x-auto">
+
+                        <table class="w-full text-left text-xs border-collapse">
+
+                            <thead>
+
+                                <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
+
+                                    <th class="p-2.5">Date Saved</th>
+
+                                    <th class="p-2.5">Customer Name</th>
+
+                                    <th class="p-2.5">Phone / Email</th>
+
+                                    <th class="p-2.5">Service Type</th>
+
+                                    <th class="p-2.5">Vehicle</th>
+
+                                    <th class="p-2.5">Route (Pickup -> Drop)</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="bookings-tbody" class="divide-y divide-slate-100 text-slate-600">
+
+                                <!-- Dynamic Rows Inserted via JS -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <!-- Feedback Table -->
+
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
+
+                    <h3 class="text-base font-bold text-brandNavy flex items-center gap-2">
+
+                        <i class="fa-solid fa-star text-amber-500"></i> Saved Customer Feedback (<span id="feedback-count">0</span>)
+
+                    </h3>
+
+                    <div class="overflow-x-auto">
+
+                        <table class="w-full text-left text-xs border-collapse">
+
+                            <thead>
+
+                                <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
+
+                                    <th class="p-2.5">Date Saved</th>
+
+                                    <th class="p-2.5">Name</th>
+
+                                    <th class="p-2.5">Email</th>
+
+                                    <th class="p-2.5">Rating</th>
+
+                                    <th class="p-2.5">Comments</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="feedback-tbody" class="divide-y divide-slate-100 text-slate-600">
+
+                                <!-- Dynamic Rows Inserted via JS -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+    </main>
+
+ 
+
+    <!-- MAIN FOOTER SECTION -->
+
+    <footer class="bg-brandNavy text-white border-t border-blue-900 mt-12">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Col 1: About & Logo -->
+
+                <div class="space-y-4">
+
+                    <div class="flex items-center gap-3">
+
+                        <svg width="36" height="36" viewBox="0 0 100 100">
+
+                            <circle cx="48" cy="52" r="38" fill="#0066cc" />
+
+                            <path d="M 12 55 Q 50 15 90 8 Q 65 35 15 68 Z" fill="#ffffff" />
+
+                            <path d="M 68 32 L 88 8 L 82 28 Z" fill="#e63946" />
+
+                        </svg>
+
+                        <div>
+
+                            <span class="block text-lg font-extrabold leading-tight">Classic Car Rentals</span>
+
+                            <span class="block text-[10px] font-bold text-brandRed uppercase tracking-widest">The Travel Experts</span>
+
+                        </div>
+
+                    </div>
+
+                    <p class="text-xs text-slate-300 leading-relaxed">
+
+                        Classic Car Rental Service Pvt Ltd is a GST-registered transportation pioneer since 2014, providing PAN India corporate employee transit, luxury rentals, and long-term car leases.
+
+                    </p>
+
+                    <p class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-registered"></i> GST Registered Enterprise</p>
+
+                </div>
+
+ 
+
+                <!-- Col 2: Navigation Links -->
+
+                <div>
+
+                    <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider mb-3">Quick Navigation</h4>
+
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+
+                        <li><button onclick="navigateTo('home')" class="hover:text-white transition">Home Page</button></li>
+
+                        <li><button onclick="navigateTo('about')" class="hover:text-white transition">About Corporate Journey</button></li>
+
+                        <li><button onclick="navigateTo('services')" class="hover:text-white transition">LTR & ETS Mobility</button></li>
+
+                        <li><button onclick="navigateTo('fleet')" class="hover:text-white transition">Luxury Fleet & Coaches</button></li>
+
+                        <li><button onclick="navigateTo('clients')" class="hover:text-white transition">Corporate Clients</button></li>
+
+                        <li><button onclick="navigateTo('careers')" class="hover:text-white transition">Careers & CV Submissions</button></li>
+
+                    </ul>
+
+                </div>
+
+ 
+
+                <!-- Col 3: Services & Amenities -->
+
+                <div>
+
+                    <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider mb-3">Services & Hospitality</h4>
+
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+
+                        <li>Long Term Rentals (26 Days / 2600 KM)</li>
+
+                        <li>Short Term & Airport Transfers (4h/40km)</li>
+
+                        <li>Employee Transportation Services (ETS)</li>
+
+                        <li>Luxury Wedding & Conference Mobility</li>
+
+                        <li>Complimentary Mineral Water & Facial Tissues</li>
+
+                        <li>24/7 GPS Security & Live Tracking</li>
+
+                    </ul>
+
+                </div>
+
+ 
+
+                <!-- Col 4: Corporate Address -->
+
+                <div>
+
+                    <h4 class="text-sm font-bold text-amber-400 uppercase tracking-wider mb-3">Headquarters Address</h4>
+
+                    <address class="not-italic text-xs text-slate-300 space-y-2">
+
+                        <p><i class="fa-solid fa-building text-brandRed mr-1.5"></i> Splendor Tower 2, 4th Floor, Unit 401-402, Golf Course Extn. Rd, Sector 58, Gurgaon, Haryana 122102</p>
+
+                        <p><i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i> +91 96543 62430 / +91 72909 91912</p>
+
+                        <p><i class="fa-solid fa-envelope text-sky-400 mr-1.5"></i> sandeep@ccrs.co.in</p>
+
+                        <p><i class="fa-solid fa-paper-plane text-emerald-400 mr-1.5"></i> booking@ccrs.co.in</p>
+
+                    </address>
+
+                </div>
+
+            </div>
+
+ 
+
+            <!-- COPYRIGHT & REQUIRED CREATOR STATEMENT -->
+
+            <div class="border-t border-blue-900/80 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-3">
+
+                <p>© 2026 Classic Car Rental Service Pvt Ltd. All rights reserved.</p>
+
+                <div class="bg-blue-950 px-4 py-2 rounded-xl border border-blue-800 text-center font-bold text-white shadow-inner">
+
+                    This website is created by Rahul Maurya.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+ 
+
+    <!-- SUCCESS NOTIFICATION MODAL -->
+
+    <div id="modal-alert" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 space-y-4 text-center shadow-2xl transform transition-all">
+
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto font-bold">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+            <h3 id="modal-title" class="text-xl font-bold text-slate-900">Request Submitted!</h3>
+
+            <p id="modal-message" class="text-xs text-slate-600 leading-relaxed"></p>
+
+            <button onclick="closeModal()" class="w-full bg-brandNavy hover:bg-brandBlue text-white py-2.5 rounded-xl text-xs font-bold transition">
+
+                Close & Continue
+
+            </button>
+
+        </div>
+
+    </div>
+
+ 
+
+    <script>
+
+        // Default Storage Initialization
+
+        if (!localStorage.getItem('ccrs_bookings')) {
+
+            localStorage.setItem('ccrs_bookings', JSON.stringify([
+
+                {
+
+                    timestamp: '2026-09-28 10:30',
+
+                    name: 'Rajesh Sharma',
+
+                    phone: '+91 98112 34567',
+
+                    email: 'rajesh@apollo.com',
+
+                    service: 'Long Term Rental (LTR)',
+
+                    vehicle: 'SUV (Innova Crysta)',
+
+                    pickup: 'Gurgaon Sector 58',
+
+                    drop: 'Delhi IGI Airport',
+
+                    notes: 'Corporate billing required for Apollo Hospitals.'
+
+                }
+
+            ]));
+
+        }
+
+ 
+
+        if (!localStorage.getItem('ccrs_feedback')) {
+
+            localStorage.setItem('ccrs_feedback', JSON.stringify([
+
+                {
+
+                    timestamp: '2026-09-28 14:15',
+
+                    name: 'Ananya Verma',
+
+                    email: 'ananya@hdfc.com',
+
+                    rating: '5',
+
+                    comments: 'Excellent clean vehicle, chauffeur was on time and water bottles were cold.'
+
+                }
+
+            ]));
+
+        }
+
+ 
+
+        // SPA Navigation Logic
+
+        function navigateTo(pageId) {
+
+            // Hide all pages
+
+            const pages = document.querySelectorAll('.page-section');
+
+            pages.forEach(p => p.classList.remove('active'));
+
+ 
+
+            // Show selected page
+
+            const targetPage = document.getElementById('page-' + pageId);
+
+            if (targetPage) {
+
+                targetPage.classList.add('active');
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            }
+
+ 
+
+            // Close mobile menu if open
+
+            document.getElementById('mobile-menu').classList.add('hidden');
+
+ 
+
+            // Render admin data if navigated to admin
+
+            if (pageId === 'admin') {
+
+                renderAdminTables();
+
+            }
+
+        }
+
+ 
+
+        function toggleMobileMenu() {
+
+            const menu = document.getElementById('mobile-menu');
+
+            menu.classList.toggle('hidden');
+
+        }
+
+ 
+
+        // Modal Handler
+
+        function showModal(title, message) {
+
+            document.getElementById('modal-title').innerText = title;
+
+            document.getElementById('modal-message').innerText = message;
+
+            document.getElementById('modal-alert').classList.remove('hidden');
+
+        }
+
+ 
+
+        function closeModal() {
+
+            document.getElementById('modal-alert').classList.add('hidden');
+
+        }
+
+ 
+
+        // Quick Estimate Form
+
+        function handleQuickEstimate(e) {
+
+            e.preventDefault();
+
+            const service = document.getElementById('hero-service-type').value;
+
+            const car = document.getElementById('hero-car-type').value;
+
+            const city = document.getElementById('hero-city').value;
+
+ 
+
+            // Pre-fill booking form
+
+            document.getElementById('bk-service').value = service === 'LTR' ? 'LTR Fixed Monthly' : 'Short Term 8h/80km';
+
+            document.getElementById('bk-vehicle').value = car === 'Sedan' ? 'Sedan (Dzire/Etios)' : 'SUV (Innova Crysta)';
+
+            document.getElementById('bk-pickup').value = city;
+
+ 
+
+            navigateTo('booking');
+
+        }
+
+ 
+
+        // Main Booking Submission
+
+        function handleMainBookingSubmit(e) {
+
+            e.preventDefault();
+
+            const bookingObj = {
+
+                timestamp: new Date().toLocaleString(),
+
+                service: document.getElementById('bk-service').value,
+
+                vehicle: document.getElementById('bk-vehicle').value,
+
+                pickup: document.getElementById('bk-pickup').value,
+
+                drop: document.getElementById('bk-drop').value,
+
+                datetime: document.getElementById('bk-datetime').value,
+
+                name: document.getElementById('bk-name').value,
+
+                phone: document.getElementById('bk-phone').value,
+
+                email: document.getElementById('bk-email').value,
+
+                notes: document.getElementById('bk-notes').value
+
+            };
+
+ 
+
+            const existing = JSON.parse(localStorage.getItem('ccrs_bookings') || '[]');
+
+            existing.unshift(bookingObj);
+
+            localStorage.setItem('ccrs_bookings', JSON.stringify(existing));
+
+ 
+
+            showModal('Booking Request Confirmed!', `Thank you ${bookingObj.name}. Your booking for ${bookingObj.vehicle} has been logged. Our operations team (+91 96543 62430) will call you shortly.`);
+
+            document.getElementById('main-booking-form').reset();
+
+        }
+
+ 
+
+        // Feedback Submission
+
+        function handleFeedbackSubmit(e) {
+
+            e.preventDefault();
+
+            const fbObj = {
+
+                timestamp: new Date().toLocaleString(),
+
+                name: document.getElementById('fb-name').value,
+
+                email: document.getElementById('fb-email').value,
+
+                phone: document.getElementById('fb-phone').value,
+
+                rating: document.getElementById('fb-rating').value,
+
+                comments: document.getElementById('fb-comments').value
+
+            };
+
+ 
+
+            const existing = JSON.parse(localStorage.getItem('ccrs_feedback') || '[]');
+
+            existing.unshift(fbObj);
+
+            localStorage.setItem('ccrs_feedback', JSON.stringify(existing));
+
+ 
+
+            showModal('Feedback Received!', 'Thank you for sharing your experience with Classic Car Rental Service Pvt Ltd.');
+
+            document.getElementById('feedback-form').reset();
+
+        }
+
+ 
+
+        // Career Application
+
+        function handleCareerSubmit(e) {
+
+            e.preventDefault();
+
+            showModal('Application Submitted!', 'Thank you for applying. Please send a copy of your CV directly to booking@ccrs.co.in.');
+
+            e.target.reset();
+
+        }
+
+ 
+
+        // Direct Contact
+
+        function handleDirectContact(e) {
+
+            e.preventDefault();
+
+            showModal('Message Received!', 'Thank you. Our team will get back to you promptly.');
+
+            e.target.reset();
+
+        }
+
+ 
+
+        // Cities Filter
+
+        function filterCities() {
+
+            const query = document.getElementById('city-search').value.toLowerCase();
+
+            const cards = document.querySelectorAll('.city-card');
+
+            cards.forEach(card => {
+
+                if (card.innerText.toLowerCase().includes(query)) {
+
+                    card.style.display = 'block';
+
+                } else {
+
+                    card.style.display = 'none';
+
+                }
+
+            });
+
+        }
+
+ 
+
+        // Render Admin Data
+
+        function renderAdminTables() {
+
+            const bookings = JSON.parse(localStorage.getItem('ccrs_bookings') || '[]');
+
+            const feedback = JSON.parse(localStorage.getItem('ccrs_feedback') || '[]');
+
+ 
+
+            document.getElementById('booking-count').innerText = bookings.length;
+
+            document.getElementById('feedback-count').innerText = feedback.length;
+
+ 
+
+            const bkBody = document.getElementById('bookings-tbody');
+
+            bkBody.innerHTML = bookings.length === 0 ? `<tr><td colspan="6" class="p-4 text-center">No bookings recorded yet.</td></tr>` :
+
+                bookings.map(b => `
+
+                    <tr>
+
+                        <td class="p-2.5 font-semibold text-slate-500">${b.timestamp || 'N/A'}</td>
+
+                        <td class="p-2.5 font-bold text-brandNavy">${b.name}</td>
+
+                        <td class="p-2.5">${b.phone}<br><span class="text-[10px] text-slate-400">${b.email}</span></td>
+
+                        <td class="p-2.5 font-semibold text-brandBlue">${b.service}</td>
+
+                        <td class="p-2.5">${b.vehicle}</td>
+
+                        <td class="p-2.5">${b.pickup} ➔ ${b.drop}</td>
+
+                    </tr>
+
+                `).join('');
+
+ 
+
+            const fbBody = document.getElementById('feedback-tbody');
+
+            fbBody.innerHTML = feedback.length === 0 ? `<tr><td colspan="5" class="p-4 text-center">No feedback responses yet.</td></tr>` :
+
+                feedback.map(f => `
+
+                    <tr>
+
+                        <td class="p-2.5 font-semibold text-slate-500">${f.timestamp || 'N/A'}</td>
+
+                        <td class="p-2.5 font-bold text-brandNavy">${f.name}</td>
+
+                        <td class="p-2.5">${f.email}</td>
+
+                        <td class="p-2.5 text-amber-500 font-bold">${'⭐'.repeat(parseInt(f.rating || 5))}</td>
+
+                        <td class="p-2.5">${f.comments}</td>
+
+                    </tr>
+
+                `).join('');
+
+        }
+
+ 
+
+        // Export to CSV Function
+
+        function exportToCSV(type) {
+
+            const data = JSON.parse(localStorage.getItem(type === 'bookings' ? 'ccrs_bookings' : 'ccrs_feedback') || '[]');
+
+            if (data.length === 0) {
+
+                showModal('No Data Found', 'There are no responses stored to export.');
+
+                return;
+
+            }
+
+ 
+
+            const headers = Object.keys(data[0]).join(',');
+
+            const rows = data.map(obj => Object.values(obj).map(val => `"${(val || '').toString().replace(/"/g, '""')}"`).join(','));
+
+            const csvContent = "data:text/csv;charset=utf-8," + [headers, ...rows].join("\n");
+
+ 
+
+            const encodedUri = encodeURI(csvContent);
+
+            const link = document.createElement("a");
+
+            link.setAttribute("href", encodedUri);
+
+            link.setAttribute("download", `Classic_Car_Rentals_${type}_${new Date().toISOString().slice(0,10)}.csv`);
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            document.body.removeChild(link);
+
+        }
+
+ 
+
+        function clearAllData() {
+
+            if (confirm('Are you sure you want to clear all locally saved bookings and feedback responses?')) {
+
+                localStorage.removeItem('ccrs_bookings');
+
+                localStorage.removeItem('ccrs_feedback');
+
+                renderAdminTables();
+
+                showModal('Cleared', 'LocalStorage database reset successfully.');
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+```
